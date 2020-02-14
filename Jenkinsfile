@@ -25,6 +25,7 @@ pipeline {
             }
             post {
                 success {
+                    rm 'target/surefire-reports/**/*.xml'
                     junit 'target/surefire-reports/**/*.xml' 
                 }
             }
